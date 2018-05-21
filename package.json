@@ -1,0 +1,56 @@
+{
+    "name": "cozy",
+    "description": "The Cozy theme for ghost, based on Casper theme",
+    "version": "1.0.0",
+    "engines": {
+        "ghost": ">=1.2.0"
+    },
+    "license": "MIT",
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
+    },
+    "scripts": {
+      "dev": "gulp",
+      "zip": "gulp zip"
+    },
+    "author": {
+        "name": "Cozy Team",
+        "email": "claude@cozycloud.cc",
+        "url": "https://cozy.io"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Magazine"
+        ]
+    },
+    "keywords": [
+        "ghost",
+        "theme"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/com:cozy/cozy-ghost-theme.git"
+    },
+    "bugs": "https://github.com/cozy/cozy-ghost-theme/issues",
+    "contributors": "https://github.com/cozy/cozy-ghost-theme/graphs/contributors",
+    "devDependencies": {
+        "autoprefixer": "6.3.6",
+        "cssnano": "3.7.1",
+        "gulp": "3.9.1",
+        "gulp-livereload": "3.8.1",
+        "gulp-postcss": "6.1.1",
+        "gulp-sourcemaps": "1.6.0",
+        "gulp-util": "3.0.7",
+        "gulp-watch": "4.3.8",
+        "gulp-zip": "4.0.0",
+        "postcss-color-function": "2.0.1",
+        "postcss-custom-properties": "5.0.1",
+        "postcss-easy-import": "1.0.1"
+    },
+    "config": {
+        "posts_per_page": 25
+    }
+}
