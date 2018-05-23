@@ -106,6 +106,11 @@ body {
     width: 100%;
 }
 
+.inner--narrow {
+    max-width: 704px;
+    width: 100%;
+}
+
 /* Usage:
 
 <div class="outer">
@@ -387,7 +392,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin: 0 20px 40px;
+    margin: 0 8px 40px;
     min-height: 300px;
     background: #fff center center;
     background-size: cover;
@@ -585,41 +590,49 @@ The first (most recent) post in the list is styled to be bigger than the others 
  */
 
 @media (min-width: 795px) {
-    .home-template .post-feed .post-card:first-child:not(.no-image) {
+    .home-template .post-feed .post-card:first-child:not(.no-image),
+    .tag-template .post-feed .post-card:first-child:not(.no-image) {
         flex: 1 1 100%;
         flex-direction: row;
     }
 
-    .home-template .post-feed .post-card:first-child:not(.no-image) .post-card-image-link {
+    .home-template .post-feed .post-card:first-child:not(.no-image) .post-card-image-link,
+    .tag-template .post-feed .post-card:first-child:not(.no-image) .post-card-image-link {
         position: relative;
         flex: 1 1 auto;
         border-radius: 5px 0 0 5px;
     }
 
-    .home-template .post-feed .post-card:first-child:not(.no-image) .post-card-image {
+    .home-template .post-feed .post-card:first-child:not(.no-image) .post-card-image,
+    .tag-template .post-feed .post-card:first-child:not(.no-image) .post-card-image {
         position: absolute;
         width: 100%;
         height: 100%;
     }
 
-    .home-template .post-feed .post-card:first-child:not(.no-image) .post-card-content {
+    .home-template .post-feed .post-card:first-child:not(.no-image) .post-card-content,
+    .tag-template .post-feed .post-card:first-child:not(.no-image) .post-card-content {
         flex: 0 1 50%;
     }
 
-    .home-template .post-feed .post-card:first-child:not(.no-image) h2 {
+    .home-template .post-feed .post-card:first-child:not(.no-image) h2,
+    .tag-template .post-feed .post-card:first-child:not(.no-image) h2 {
         font-size: 2.4rem;
     }
 
-    .home-template .post-feed .post-card:first-child:not(.no-image) p {
+    .home-template .post-feed .post-card:first-child:not(.no-image) p,
+    .tag-template .post-feed .post-card:first-child:not(.no-image) p {
         font-size: 1.8rem;
         line-height: 1.5em;
     }
 
-    .home-template .post-feed .post-card:first-child:not(.no-image) .post-card-content-link {
+    .home-template .post-feed .post-card:first-child:not(.no-image) .post-card-content-link,
+    .tag-template .post-feed .post-card:first-child:not(.no-image) .post-card-content-link {
         padding: 32px 32px 0;
     }
 
-    .home-template .post-feed .post-card:first-child:not(.no-image) .post-card-meta {
+    .home-template .post-feed .post-card:first-child:not(.no-image) .post-card-meta,
+    .tag-template .post-feed .post-card:first-child:not(.no-image) .post-card-meta {
         padding: 0 32px 32px;
     }
 }
@@ -644,23 +657,13 @@ The first (most recent) post in the list is styled to be bigger than the others 
 /* 7. Single Post
 /* ---------------------------------------------------------- */
 
-.post-template .site-main,
-.page-template .site-main {
-    padding-bottom: 4vw;
-    background: #fff;
-}
-
 .post-full {
     position: relative;
-    z-index: 50;
 }
-/* ^ Required to make .post-full-content:before/after z-index stacking work */
 
 .post-full-header {
-    margin: 0 auto;
-    padding: 6vw 3vw 3vw;
-    max-width: 1040px;
-    text-align: center;
+    margin: 0 auto 1.6rem;
+    max-width: 1900px;
 }
 @media (max-width: 500px) {
     .post-full-header {
@@ -670,16 +673,26 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-meta {
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-bottom: 8px;
+    padding-top: 2.4rem;
     color: var(--midgrey);
     font-size: 1.4rem;
-    font-weight: 600;
-    text-transform: uppercase;
 }
 
-.post-full-meta-date {
-    color: var(--blue);
+.post-full-meta > *:not(:first-child):before {
+    content: "";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 0;
+    height: 12px;
+    border-left: 1px solid var(--silver);
+    margin: 0 8px;
+}
+
+.post-full-meta-tag {
+    text-transform: uppercase;
 }
 
 .post-full-title {
@@ -693,11 +706,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-image {
-    margin: 0 -10vw -165px;
-    height: 800px;
+    height: 256px;
     background: var(--lightgrey) center center;
     background-size: cover;
-    border-radius: 5px;
 }
 
 @media (max-width: 1170px) {
@@ -717,12 +728,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content {
     position: relative;
     margin: 0 auto;
-    padding: 70px 100px 0;
     min-height: 230px;
-    font-family: Georgia, serif;
-    font-size: 2.2rem;
-    line-height: 1.6em;
-    background: #fff;
+    font-size: 1.8rem;
+    line-height: 1.55em;
 }
 
 @media (max-width: 1170px) {
@@ -736,41 +744,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
     }
 }
 
-.post-full-content:before {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: -5px;
-    z-index: -1;
-    display: block;
-    width: 20px;
-    height: 200px;
-    background: rgba(39,44,49,0.15);
-    filter: blur(5px);
-    transform: rotate(-5deg);
-}
-
-.post-full-content:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    right: -5px;
-    z-index: -1;
-    display: block;
-    width: 20px;
-    height: 200px;
-    background: rgba(39,44,49,0.15);
-    filter: blur(5px);
-    transform: rotate(5deg);
-}
-
 .no-image .post-full-content {
     padding-top: 0;
-}
-
-.no-image .post-full-content:before,
-.no-image .post-full-content:after {
-    display: none;
 }
 
 .kg-card-markdown {
@@ -806,18 +781,20 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-template .kg-card-markdown > p:first-child {
-    font-size: 1.25em;
-    line-height: 1.5em;
+    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    color: var(--slategrey);
 }
 
 .post-full-content a {
-    color: #000;
-    box-shadow: var(--blue) 0 -1px 0 inset;
+    color: var(--blue);
+    text-decoration: none;
 }
 
 .post-full-content a:hover {
-    color: var(--blue);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .post-full-content strong,
@@ -830,6 +807,10 @@ The first (most recent) post in the list is styled to be bigger than the others 
     line-height: 1.6em;
 }
 
+.post-full-content hl {
+    background-color: color(var(--blue) a(15%));
+}
+
 .post-full-content li:first-child {
     margin-top: 0;
 }
@@ -837,14 +818,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content img,
 .post-full-content video {
     display: block;
-    margin: 1.5em auto;
-    max-width: 1040px;
-}
-@media (max-width: 1040px) {
-    .post-full-content img,
-    .post-full-content video {
-        width: 100%;
-    }
+    margin: 1.5rem auto;
+    max-width: 100%;
 }
 
 
@@ -872,27 +847,15 @@ Usage (In Ghost editor):
 */
 .post-full-content img + br + small {
     display: block;
-    margin-top: -3em;
+    margin-top: -3.5rem;
     margin-bottom: 1.5em;
+    text-align: center;
+    font-style: italic;
 }
 
 
 .post-full-content iframe {
     margin: 0 auto;
-}
-
-.post-full-content blockquote {
-    margin: 0 0 1.5em;
-    padding: 0 1.5em;
-    border-left: #3eb0ef 3px solid;
-}
-
-.post-full-content blockquote p {
-    margin: 0 0 1em 0;
-    color: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    font-style: italic;
 }
 
 .post-full-content blockquote p:last-child {
@@ -1256,46 +1219,104 @@ Usage (In Ghost editor):
 /* ---------------------------------------------------------- */
 
 .post-full-footer {
-    display: flex;
-    justify-content: space-between;
+    padding: 0;
+}
+
+.post-tags {
+    margin: 0 0 3.2rem;
+    padding: 0;
+    list-style: none;
+}
+
+.post-tags li {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0;
+}
+
+.post-tag {
+    border-radius: 4px;
+    background-color: color(var(--blue) a(15%));
+    padding: .8rem 1.6rem;
+    color: var(--blue);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.post-tag:hover,
+.post-tag:focus {
+    background-color: color(var(--blue) a(30%));
+    text-decoration: none;
+}
+
+.post-signature {
+    border-top: 1px solid var(--silver);
+    padding-top: 3.2rem;
+}
+
+.signature-item {
+    margin-bottom: 2.4rem;
+}
+
+.signature-item .author-card .author-profile-image,
+.signature-item .author-card .avatar-wrapper {
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-right: 1.6rem;
+}
+
+.signature-item .author-card-name {
+    font-size: 2.4rem;
+}
+
+.signature-item .author-social {
+    display: inline-flex;
     align-items: center;
-    margin: 0 auto;
-    padding: 3vw 0 6vw 0;
-    max-width: 840px;
+}
+
+.signature-item .author-social svg {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.signature-item .author-social:before {
+    content: "";
+    display: inline-block;
+    margin: 0 1.6rem;
+    width: 0;
+    height: 24px;
+    border-left: 1px solid var(--silver);
+}
+
+.signature-bio {
+    padding-left: 6.4rem;
 }
 
 /* 7.2.1 Single Author Byline
 /* ---------------------------------------------------------- */
 
 .author-card {
-    display: flex;
+    display: inline-flex;
+    align-items: center;
 }
 
 .author-card .author-profile-image {
-    margin-right: 15px;
-    width: 60px;
-    height: 60px;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
 }
 
 .author-card-name {
-    margin: 8px 0 2px 0;
     padding: 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .author-card-name a {
-    color: var(--darkgrey);
-    font-weight: 700;
+    color: var(--blue);
 }
 
 .author-card-name a:hover {
     text-decoration: none;
-}
-
-.author-card-content p {
-    margin: 0;
-    color: var(--midgrey);
-    line-height: 1.3em;
 }
 
 .post-full-footer-right {
@@ -1325,13 +1346,16 @@ Usage (In Ghost editor):
 /* ---------------------------------------------------------- */
 
 .post-full-authors {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
     align-items: center;
-    margin-top: 20px;
-    padding-top: 40px;
-    border-top: color(var(--lightgrey) l(+10%)) 1px solid;
+}
+
+.post-full-authors .moving-avatar {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.post-full-authors .author-list {
+    margin-right: 1rem;
 }
 
 .post-full-authors-content {
@@ -1355,14 +1379,8 @@ Usage (In Ghost editor):
     text-transform: uppercase;
 }
 
-.post-full-footer .author-list {
-    justify-content: center;
-    padding: 10px 20px;
-}
-
 .author-card .author-profile-image,
 .author-card .avatar-wrapper {
-    margin-right: 15px;
     position: relative;
 }
 
@@ -1465,11 +1483,22 @@ Usage (In Ghost editor):
 /* 7.4. Related posts
 /* ---------------------------------------------------------- */
 
+.read-next {
+    background-color: var(--whitegrey);
+    padding-top: 5rem;
+}
+
+.read-next-title {
+    margin: 0 0 2.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
 .read-next-feed {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -20px;
-    padding: 40px 0 0 0;
+    padding: 0;
 }
 
 .read-next-card {
