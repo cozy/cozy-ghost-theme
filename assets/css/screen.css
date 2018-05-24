@@ -184,17 +184,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    overflow-y: hidden;
     height: 48px;
-    padding: 8px 24px;
-    font-size: 1.2rem;
+    padding: 4px 24px;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
-.site-nav-left {
+.site-nav-right {
     display: flex;
     align-items: center;
-    overflow-x: auto;
-    overflow-y: hidden;
+    /*overflow-x: auto;*/
+    /*overflow-y: hidden;*/
     -webkit-overflow-scrolling: touch;
     margin-right: 10px;
     letter-spacing: 0.4px;
@@ -231,7 +231,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     height: 32px;
 }
 
-.nav {
+.nav > ul {
     display: flex;
     margin: 0 0 0 -12px;
     padding: 0;
@@ -239,105 +239,98 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .nav li {
+    position: relative;
     display: block;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
 }
 
-.nav li a {
+.nav li a,
+.subnav > span  {
     display: block;
     margin: 0;
     padding: 10px 12px;
     color: var(--coolgrey);
-    opacity: 0.8;
 }
 
-.nav li a:hover {
+.nav li a:hover,
+.subnav:hover > span {
     text-decoration: none;
+    color: var(--darkgrey);
+    cursor: pointer;
+}
+
+.subnav:hover .nav--sub {
+    visibility: visible;
+    top: 4rem;
     opacity: 1;
 }
 
-.site-nav-right {
+.nav--sub {
+    visibility: hidden;
+    box-sizing: content-box;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 3rem;
+    margin: 0;
+    max-width: initial;
+    transform: translateX(-50%);
+    padding: 1rem 2.4rem;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.nav--sub:before {
+    content: "";
+    position: absolute;
+    top: -.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent white transparent;
+}
+
+.nav--sub li a {
+    padding: 5px 0;
+    white-space: nowrap;
+}
+
+.site-nav-left {
     flex-shrink: 0;
     display: flex;
     align-items: center;
     height: 40px;
 }
 
-.social-links {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-}
-
-.social-links a:last-of-type {
-    padding-right: 20px;
-}
-
-.social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 10px;
-    color: #fff;
-    opacity: 0.8;
-}
-
-.social-link:hover {
-    opacity: 1;
-}
-
-.social-link svg {
-    height: 1.8rem;
-    fill: #fff;
-}
-
-.social-link-fb svg {
-    height: 1.5rem;
-}
-
-.social-link-wb svg {
-    height: 1.6rem;
-}
-
-.social-link-wb svg path {
-    stroke: #fff;
-}
-
-.social-link-rss svg {
-    height: 1.9rem;
-}
-
-.subscribe-button {
-    display: block;
-    padding: 4px 10px;
-    border: #fff 1px solid;
-    color: #fff;
-    font-size: 1.2rem;
-    line-height: 1em;
-    border-radius: 10px;
-    opacity: 0.8;
-}
-
-.subscribe-button:hover {
-    text-decoration: none;
-    opacity: 1;
-}
-
 .rss-button {
-    opacity: 0.8;
-}
-
-.rss-button:hover {
-    opacity: 1;
+    width: 2.1rem;
+    height: 2.1rem;
 }
 
 .rss-button svg {
-    margin-bottom: 1px;
+    display: block;
     height: 2.1rem;
-    fill: #fff;
+    fill: var(--coolgrey);
+}
+
+.rss-button:hover svg {
+    fill: var(--darkgrey);
+}
+
+.pagination {
+    display: flex;
+}
+
+.pagination-next {
+    margin-left: auto;
 }
 
 .pagination-prev,
@@ -2127,7 +2120,7 @@ Usage (In Ghost editor):
     justify-content: center;
     align-items: center;
     color: var(--coolgrey);
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 2;
 }
 

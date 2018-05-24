@@ -3,18 +3,29 @@
         <a class="site-nav-logo" href="{{@blog.url}}"><img src="/assets/img/logo-blog-cozycloud.svg" alt="{{@blog.title}}" /></a>
     </div>
     <div class="site-nav-right">
-        <div class="social-links">
-            {{#if @blog.facebook}}
-                <a class="social-link social-link-fb" href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-            {{/if}}
-            {{#if @blog.twitter}}
-                <a class="social-link social-link-tw" href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-            {{/if}}
-        </div>
-        {{#if @labs.subscribers}}
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
-        {{else}}
-            <a class="rss-button" href="{{@blog.url}}/rss/" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-        {{/if}}
+        <nav class="nav">
+            <ul>
+                <li><a href="{{@blog.url}}/tag/features">{{t "Features"}}</a></li>
+                <li class="subnav">
+                    <span>{{t "Team"}}</span>
+                    <ul class="nav--sub">
+                        <li><a href="{{@blog.url}}/tag/tech">{{t "Tech"}}</a></li>
+                        <li><a href="{{@blog.url}}/tag/cloudery">{{t "Cloudery"}}</a></li>
+                    </ul>
+                </li>
+                <li class="subnav">
+                    <span>{{t "News"}}</span>
+                    <ul class="nav--sub">
+                        <li><a href="{{@blog.url}}/tag/privacy">{{t "Privacy"}}</a></li>
+                        <li><a href="{{@blog.url}}/tag/ai">{{t "AI"}}</a></li>
+                        <li><a href="{{@blog.url}}/tag/community">{{t "Community"}}</a></li>
+                        <li><a href="{{@blog.url}}/tag/events">{{t "Events"}}</a></li>
+                        <li><a href="{{@blog.url}}/tag/podcasts">{{t "Podcasts"}}</a></li>
+                        <li><a href="{{@blog.url}}/tag/jobs">{{t "Jobs"}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <a class="rss-button" href="{{@blog.url}}/rss/" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
     </div>
 </nav>
