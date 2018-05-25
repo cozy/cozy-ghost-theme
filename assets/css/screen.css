@@ -111,6 +111,13 @@ body {
     width: 100%;
 }
 
+@media (max-width: 1056px) {
+    .inner {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+}
+
 /* Usage:
 
 <div class="outer">
@@ -174,6 +181,9 @@ body {
     .site-description {
         font-size: 1.8rem;
     }
+    .site-header-content {
+        min-height: 128px;
+    }
 }
 
 
@@ -185,7 +195,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     height: 48px;
-    padding: 4px 24px;
+    padding: 4px 0;
     font-size: 1.4rem;
     font-weight: bold;
 }
@@ -193,14 +203,9 @@ body {
 .site-nav-right {
     display: flex;
     align-items: center;
-    /*overflow-x: auto;*/
-    /*overflow-y: hidden;*/
-    -webkit-overflow-scrolling: touch;
     margin-right: 10px;
     letter-spacing: 0.4px;
     white-space: nowrap;
-
-    -ms-overflow-scrolling: touch;
 }
 
 /* Site Nav Hack Explanation (above):
@@ -267,6 +272,9 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     opacity: 1;
 }
 
+.nav .nav--mobile {
+    display: none;
+}
 .nav--sub {
     visibility: hidden;
     box-sizing: content-box;
@@ -359,12 +367,31 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         padding-right: 0;
         padding-left: 0;
     }
+    .site-nav {
+        flex-wrap: wrap;
+        height: auto;
+    }
     .site-nav-left {
+        flex-basis: 100%;
         margin-right: 0;
-        padding-left: 4vw;
     }
     .site-nav-right {
+        flex-basis: 100%;
+        margin: 0;
+        padding: 0 1.6rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-scrolling: touch;
+    }
+    .nav .subnav {
         display: none;
+    }
+    .nav .nav--mobile {
+        display: block;
+    }
+    .site-nav-logo {
+        margin: 0 auto;
     }
 }
 
@@ -650,15 +677,11 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin: 0 auto 1.6rem;
     max-width: 1900px;
 }
-@media (max-width: 500px) {
-    .post-full-header {
-        padding: 14vw 3vw 10vw;
-    }
-}
 
 .post-full-meta {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 8px;
     padding-top: 2.4rem;
     color: var(--midgrey);
@@ -696,17 +719,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
     background-size: cover;
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 480px) {
     .post-full-image {
-        margin: 0 -4vw -100px;
-        height: 600px;
-        border-radius: 0;
-    }
-}
-
-@media (max-width: 800px) {
-    .post-full-image {
-        height: 400px;
+        max-height: 128px;
     }
 }
 
@@ -716,17 +731,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
     min-height: 230px;
     font-size: 1.8rem;
     line-height: 1.55em;
-}
-
-@media (max-width: 1170px) {
-    .post-full-content {
-        padding: 5vw 7vw 0;
-    }
-}
-@media (max-width: 800px) {
-    .post-full-content {
-        font-size: 1.9rem;
-    }
 }
 
 .no-image .post-full-content {
@@ -962,7 +966,7 @@ Usage (In Ghost editor):
     padding: 1em 0 1.5em;
     border: 0;
     color: var(--blue);
-    font-family: Georgia,serif;
+    font-family: Lato,serif;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -1019,17 +1023,6 @@ Usage (In Ghost editor):
     }
     .post-full-title {
         font-size: 2.9rem;
-    }
-    .post-full-image {
-        margin-bottom: 4vw;
-        height: 350px;
-    }
-    .post-full-content {
-        padding: 0;
-    }
-    .post-full-content:before,
-    .post-full-content:after {
-        display: none;
     }
 }
 
@@ -1202,10 +1195,6 @@ Usage (In Ghost editor):
 
 /* 7.2. Post Footer
 /* ---------------------------------------------------------- */
-
-.post-full-footer {
-    padding: 0;
-}
 
 .post-tags {
     margin: 0 0 3.2rem;
@@ -2191,16 +2180,18 @@ Usage (In Ghost editor):
 /* 12. Site About
 /* ---------------------------------------------------------- */
 
+@media (max-width: 767px) {
+    .site-about {
+        display: none;
+    }
+}
+
 .site-about-toggle {
     font-size: 1.4rem;
     color: var(--coolgrey);
     font-weight: bold;
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
-}
-
-.site-about-toggle .inner {
-    padding: 0 2.4rem;
 }
 
 .site-about-toggle .arrow {
