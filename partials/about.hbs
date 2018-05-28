@@ -14,11 +14,7 @@
                     {{t "Choose simplicity,"}}<br />
                     {{t "get Cozy"}}
                 </div>
-                <div class="about-lang">
-                    <a href="{{@blog.url}}/en">English</a>
-                    •
-                    <a href="{{@blog.url}}/fr">Français</a>
-                </div>
+                {{navigation}}
                 <ul class="about-social">
                     <li><a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">{{> icons/facebook}}</a></li>
                     <li><a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">{{> icons/twitter}}</a></li>

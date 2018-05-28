@@ -2264,6 +2264,14 @@ Usage (In Ghost editor):
     color: var(--midgrey);
 }
 
+.about-lang a:not(:first-child):before {
+    content: " • ";
+}
+
+.about-lang .nav-current {
+    font-weight: bold;
+}
+
 .about-social {
     list-style: none;
     padding: 0;
