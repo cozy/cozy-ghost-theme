@@ -851,7 +851,12 @@ Usage (In Ghost editor):
     margin-bottom: 0;
 }
 
+.post-full-content .code-toolbar {
+    width: 100%;
+}
+
 .post-full-content code {
+    width: 100%;
     padding: 0 5px 2px;
     font-size: 0.8em;
     line-height: 1em;
