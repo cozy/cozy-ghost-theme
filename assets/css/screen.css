@@ -326,11 +326,26 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     color: var(--coolgrey);
 }
 
-.nav li a:hover,
-.subnav:hover > span {
+.nav li a:hover {
     text-decoration: none;
     color: var(--darkgrey);
     cursor: pointer;
+}
+
+.subnav:hover > span {
+    cursor: pointer;
+}
+
+.subnav > span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.subnav > span svg {
+    fill: var(--coolgrey);
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: .4rem;
 }
 
 .subnav:hover .nav--sub {
