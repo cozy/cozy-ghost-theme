@@ -149,7 +149,7 @@ body {
     max-height: 256px;
     text-align: center;
     color: #fff;
-    background: color(var(--darkgrey) l(-5%)) no-repeat center center;
+    background: var(--blue) no-repeat center center;
     background-size: cover;
 }
 
@@ -158,6 +158,10 @@ body {
     margin: 0;
     padding: 0;
     font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.home-template .site-title {
     font-weight: 500;
 }
 
@@ -172,6 +176,70 @@ body {
     font-size: 2.4rem;
     font-weight: 700;
     letter-spacing: -1px;
+}
+
+/* Category/Tag headers */
+
+[class*="site-header-tag"] {
+    position: relative;
+}
+
+[class*="site-header-tag"]:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 168px;
+    height: 168px;
+    transform: translateX(-50%) translateY(-50%);
+    background-image: url("/assets/img/icon-cozy.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    opacity: .5;
+}
+
+.site-header-tag--features,
+.site-header-tag--fonctionnalites {
+    background-color: var(--blue);
+}
+
+.site-header-tag--tech {
+    background-color: #0dcbcf;
+}
+
+.site-header-tag--cloudery,
+.site-header-tag--nuagerie {
+    background-color: #16b52d;
+}
+
+.site-header-tag--privacy,
+.site-header-tag--vie-privee {
+    background-color: #279ef2;
+}
+
+.site-header-tag--ai,
+.site-header-tag--ia {
+    background-color: #16b52d;
+}
+
+.site-header-tag--community,
+.site-header-tag--communaute {
+    background-color: #855cea;
+}
+
+.site-header-tag--events,
+.site-header-tag--evenements {
+    background-color: #ff8e8e;
+}
+
+.site-header-tag--podcasts {
+    background-color: #ffc644;
+}
+
+.site-header-tag--jobs,
+.site-header-tag--emploi {
+    background-color: var(--blue);
 }
 
 @media (max-width: 500px) {
@@ -534,6 +602,10 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     position: relative;
     margin: 0;
     padding: 0;
+}
+
+.author-list-item + .author-list-item {
+    margin-left: 1.5rem;
 }
 
 .author-list-link {

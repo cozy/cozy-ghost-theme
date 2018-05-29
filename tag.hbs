@@ -7,7 +7,7 @@
     <div class="inner">
         {{> "site-nav"}}
     </div>
-    <div class="site-header-content {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
+    <div class="site-header-content {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}site-header-tag--{{slug}}{{/if}}">
         <h1 class="site-title">{{name}}</h1>
     </div>
 </header>
