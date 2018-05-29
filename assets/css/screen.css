@@ -279,7 +279,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     visibility: hidden;
     box-sizing: content-box;
     position: absolute;
-    z-index: 10;
+    z-index: 200;
     left: 50%;
     top: 3rem;
     margin: 0;
