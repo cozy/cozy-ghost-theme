@@ -386,6 +386,41 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     height: 40px;
 }
 
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.social-link:hover {
+    opacity: 1;
+}
+
+.social-link svg {
+    height: 1.8rem;
+    fill: #fff;
+}
+
+.social-link-fb svg {
+    height: 1.5rem;
+}
+
+.social-link-wb svg {
+    height: 1.6rem;
+}
+
+.social-link-wb svg path {
+    stroke: #fff;
+}
+
+.social-link-rss svg {
+    height: 1.9rem;
+}
+
 .rss-button {
     width: 2.1rem;
     height: 2.1rem;
