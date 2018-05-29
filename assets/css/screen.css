@@ -271,7 +271,6 @@ body {
 .site-nav-right {
     display: flex;
     align-items: center;
-    margin-right: 10px;
     letter-spacing: 0.4px;
     white-space: nowrap;
 }
@@ -2393,7 +2392,11 @@ Usage (In Ghost editor):
 .about-social li {
     display: inline-block;
     padding: 0;
-    margin-right: .4rem;
+    margin-right: 1.6rem;
+}
+
+.about-social li a {
+    padding: 0;
 }
 
 .about-social svg {
