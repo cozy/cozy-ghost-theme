@@ -7,7 +7,7 @@
     <div class="inner">
         {{> "site-nav"}}
     </div>
-    <div class="site-header-content{{#if cover_image}}" style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}">
+    <div class="site-header-content {{#if cover_image}}" style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}">
         {{#if profile_image}}
             <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
         {{/if}}
