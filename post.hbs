@@ -54,6 +54,19 @@ into the {body} of the default.hbs template --}}
                 {{/foreach}}
                 </ul>
             {{/if}}
+            <p class="post-sharetitle"><strong>{{t "Spread the love!"}}</strong></p>
+            <ul class="post-share">
+                <li>
+                    <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;" class="post-share-social twitter">{{> icons/twitter}}</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+        onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;" class="post-share-social facebook">{{> icons/facebook}}</a>
+                </li>
+                <li>
+                    <a href="mailto:?body={{title}}%0A%0A{{url absolute="true"}}" class="post-share-social mail">{{> icons/mail}}</a>
+                </li>
+            </ul>
             <div class="post-signature">
                 {{#foreach authors}}
                     <div class="signature-item">
@@ -100,7 +113,7 @@ into the {body} of the default.hbs template --}}
 </aside>
 
 {{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
-{{!-- {{> floating-header}} --}}
+{{> floating-header}}
 
 {{/post}}
 
