@@ -26,12 +26,16 @@ into the {body} of the default.hbs template --}}
 
         <div class="post-feed">
             {{#foreach posts}}
-
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
-
             {{/foreach}}
             {{> "subscribe" card=true}}
+            {{!-- Call for 1 advertise page --}}
+            {{#get "posts" filter="tags:announce+page:true" limit="1"}}
+                {{#foreach posts}}
+                    {{> "announce-card"}}
+                {{/foreach}}
+            {{/get}}
         </div>
 
     </div>
