@@ -508,6 +508,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .pagination {
     display: flex;
+    margin-top: -2.5rem;
 }
 
 .pagination-next {
@@ -2034,10 +2035,12 @@ Usage (In Ghost editor):
 .subscribe {
     background-color: var(--blue);
     color: white;
+    margin-top: 3.2rem;
 }
 
 .subscribe--card {
     background: url('/assets/img/craie.png') center center / cover no-repeat;
+    margin-top: 0;
 }
 
 .subscribe-wrapper {
