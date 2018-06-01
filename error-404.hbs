@@ -16,15 +16,9 @@ It's a good idea to keep this template as minimal as possible in terms of both f
 <body class="error-template">
     <div class="site-wrapper">
 
-        <header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+        <header class="site-header outer">
             <div class="inner">
-                <nav class="site-nav-center">
-                    {{#if @blog.logo}}
-                        <a class="site-nav-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
-                    {{else}}
-                        <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
-                    {{/if}}
-                </nav>
+                {{> "site-nav"}}
             </div>
         </header>
 
