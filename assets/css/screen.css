@@ -508,6 +508,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .pagination {
     display: flex;
+    position: relative;
+    z-index: 100;
     margin-top: -2.5rem;
 }
 
