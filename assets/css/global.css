@@ -19,6 +19,22 @@
     --brown: #a3821a;
 }
 
+/* Font Family
+/* ---------------------------------------------------------- */
+@font-face {
+    font-family: 'Lato';
+    src:  url('../fonts/Lato-Regular.woff2') format('woff2'),
+          url('../fonts/Lato-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Lato';
+    src:  url('../fonts/Lato-Bold.woff2') format('woff2'),
+          url('../fonts/Lato-Bold.woff') format('woff');
+    font-weight: bold;
+
+}
+
 /* Reset
 /* ---------------------------------------------------------- */
 
