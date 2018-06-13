@@ -914,7 +914,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-image {
-    height: 256px;
+    height: 512px;
     background: var(--lightgrey) center center;
     background-size: cover;
 }
