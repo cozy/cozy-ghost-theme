@@ -16,7 +16,7 @@
                 <h2 class="post-card-title">{{title}}</h2>
             </header>
             <section class="post-card-excerpt">
-                <p>{{excerpt characters="60"}}…</p>
+                <p>{{excerpt characters="150"}}…</p>
             </section>
         </a>
         <footer class="post-card-meta">
@@ -32,13 +32,11 @@
                         {{else}}
                          <span class="static-avatar author-profile-image">{{> "icons/avatar"}}</span>
                         {{/if}}
-                        <span class="author-list-name">
-                            {{name}}
-                        </span>
                     </a>
                 </li>
             {{/foreach}}
             </ul>
+            <span class="author-card-name">{{authors}}</span>
         </footer>
     </div>
 </article>

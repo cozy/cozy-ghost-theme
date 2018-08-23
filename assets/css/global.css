@@ -354,7 +354,7 @@ ul,
 ol,
 dl,
 blockquote {
-    margin: 0 0 1.5em 0;
+    margin: 0 0 1em 0;
 }
 
 ol,
@@ -405,7 +405,7 @@ dd {
 
 blockquote {
     position: relative;
-    margin: 1.5em 0;
+    margin: 1em 0 2em;
     padding: 1.6rem 5.5rem;
 }
 
