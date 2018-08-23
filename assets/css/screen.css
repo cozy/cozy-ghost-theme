@@ -736,6 +736,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .author-list {
     display: flex;
     flex-wrap: wrap;
+    flex: 0 0 auto;
     margin: 0;
     padding: 0;
     list-style: none;
