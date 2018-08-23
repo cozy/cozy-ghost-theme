@@ -34,13 +34,28 @@ body {
     background: white;
 }
 
-.img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-size: cover;
-    border-radius: 100%;
+.kg-image-card .kg-image {
+    max-width: 100%;
+}
+
+.kg-width-wide .kg-image {
+    max-width: 1040px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+@media (max-width: 1040px) {
+    .kg-width-wide .kg-image {
+        max-width: 100vw;
+    }
+}
+
+.kg-width-full .kg-image {
+    max-width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .hidden {
@@ -689,6 +704,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .post-card-excerpt {
     margin-bottom: 1.6rem;
     font-size: 1.6rem;
+    color: color(var(--coolgrey));
 }
 
 .post-card-excerpt p {
@@ -697,9 +713,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .post-card-meta {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     padding: 0 25px 25px;
+}
+
+.post-card-meta .author-list-item + .author-list-item{
+    margin-left: -1.5rem;
 }
 
 .author-profile-image {
@@ -717,7 +735,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .author-list {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -731,7 +749,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .author-list-item + .author-list-item {
-    margin-left: 1.5rem;
+    margin-left: .5rem;
 }
 
 .author-list-link {
@@ -906,6 +924,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-title {
     margin: 0;
     color: color(var(--darkgrey) l(-5%));
+    line-height: 1.25;
 }
 
 .date-divider {
@@ -937,13 +956,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
     padding-top: 0;
 }
 
-.kg-card-markdown {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 920px;
-}
-
 .post-full-content h1,
 .post-full-content h2,
 .post-full-content h3,
@@ -967,14 +979,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-content li p {
     margin: 0;
-}
-
-.post-template .kg-card-markdown > p:first-child {
-    margin-bottom: 1.5rem;
-    font-size: 2.4rem;
-    line-height: 1.5;
-    letter-spacing: -0.2px;
-    color: var(--slategrey);
 }
 
 .post-full-content a {
@@ -1125,7 +1129,7 @@ Usage (In Ghost editor):
 .post-full-content h2 {
     margin: 0.5em 0 0.2em 0;
     font-size: 3.6rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 @media (max-width: 500px) {
     .post-full-content h2 {
@@ -1309,7 +1313,7 @@ Usage (In Ghost editor):
 
 .post-share {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin: 0 0 3.2rem;
     padding: 0;
     list-style: none;
