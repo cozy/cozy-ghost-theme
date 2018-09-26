@@ -5,31 +5,41 @@
     <div class="site-nav-right">
         <nav class="nav">
             <ul>
-                <li><a href="{{@blog.url}}/tag/{{t "featurestag"}}">{{t "Features"}}</a></li>
-                <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "techtag"}}">{{t "Tech"}}</a></li>
+                <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "producttag"}}">{{t "Product"}}</a></li>
+                <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "storiestag"}}">{{t "Stories"}}</a></li>
+                <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "techtag"}}">{{t "Tech Blog"}}</a></li>
                 <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "clouderytag"}}">{{t "Cloudery"}}</a></li>
-                <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "privacytag"}}">{{t "Privacy"}}</a></li>
+                <li class="nav--mobile hide-en"><a href="{{@blog.url}}/tag/{{t "privacytag"}}">{{t "Privacy"}}</a></li>
+                <li class="nav--mobile hide-en"><a href="{{@blog.url}}/tag/{{t "jobstag"}}">{{t "Jobs"}}</a></li>
+                <li class="nav--mobile hide-fr"><a href="{{@blog.url}}/tag/{{t "manifestotag"}}">{{t "Manifesto"}}</a></li>
                 <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "aitag"}}">{{t "AI"}}</a></li>
                 <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "communitytag"}}">{{t "Community"}}</a></li>
                 <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "eventstag"}}">{{t "Events"}}</a></li>
-                <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "podcaststag"}}">{{t "Podcasts"}}</a></li>
-                <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "jobstag"}}">{{t "Jobs"}}</a></li>
+                <li class="nav--mobile"><a href="{{@blog.url}}/tag/{{t "podcaststag"}}">{{t "Podcast"}}</a></li>
+                <li class="subnav">
+                    <span>{{t "Use cases"}} {{> "icons/arrow" direction="down"}}</span>
+                    <ul class="nav--sub">
+                        <li><a href="{{@blog.url}}/tag/{{t "producttag"}}">{{t "Product"}}</a></li>
+                        <li><a href="{{@blog.url}}/tag/{{t "storiestag"}}">{{t "Stories"}}</a></li>
+                    </ul>
+                </li>
                 <li class="subnav">
                     <span>{{t "Team"}} {{> "icons/arrow" direction="down"}}</span>
                     <ul class="nav--sub">
-                        <li><a href="{{@blog.url}}/tag/{{t "techtag"}}">{{t "Tech"}}</a></li>
+                        <li><a href="{{@blog.url}}/tag/{{t "techtag"}}">{{t "Tech Blog"}}</a></li>
                         <li><a href="{{@blog.url}}/tag/{{t "clouderytag"}}">{{t "Cloudery"}}</a></li>
                     </ul>
                 </li>
                 <li class="subnav">
                     <span>{{t "News"}} {{> "icons/arrow" direction="down"}}</span>
                     <ul class="nav--sub">
-                        <li><a href="{{@blog.url}}/tag/{{t "privacytag"}}">{{t "Privacy"}}</a></li>
+                        <li class="hide-en"><a href="{{@blog.url}}/tag/{{t "privacytag"}}">{{t "Privacy"}}</a></li>
+                        <li class="hide-en"><a href="{{@blog.url}}/tag/{{t "jobstag"}}">{{t "Jobs"}}</a></li>
+                        <li class="hide-fr"><a href="{{@blog.url}}/tag/{{t "manifestotag"}}">{{t "Manifesto"}}</a></li>
                         <li><a href="{{@blog.url}}/tag/{{t "aitag"}}">{{t "AI"}}</a></li>
                         <li><a href="{{@blog.url}}/tag/{{t "communitytag"}}">{{t "Community"}}</a></li>
                         <li><a href="{{@blog.url}}/tag/{{t "eventstag"}}">{{t "Events"}}</a></li>
-                        <li><a href="{{@blog.url}}/tag/{{t "podcaststag"}}">{{t "Podcasts"}}</a></li>
-                        <li><a href="{{@blog.url}}/tag/{{t "jobstag"}}">{{t "Jobs"}}</a></li>
+                        <li><a href="{{@blog.url}}/tag/{{t "podcasttag"}}">{{t "Podcast"}}</a></li>
                     </ul>
                 </li>
             </ul>

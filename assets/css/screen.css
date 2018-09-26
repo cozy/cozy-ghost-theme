@@ -92,6 +92,13 @@ body {
     fill: #1DA1F2;
 }
 
+html[lang=en] .hide-en {
+    display: none!important;
+}
+
+html[lang=fr] .hide-fr {
+    display: none!important;
+}
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
