@@ -245,12 +245,13 @@ html[lang=fr] .hide-fr {
     padding: 5px 0;
     font-size: 2.4rem;
     font-weight: 700;
+    font-style: italic;
     letter-spacing: -1px;
 }
 
 /* Category/Tag headers */
 
-[class*="site-header-tag"] {
+/*[class*="site-header-tag"] {
     position: relative;
 }
 
@@ -268,7 +269,7 @@ html[lang=fr] .hide-fr {
     background-position: center center;
     background-size: contain;
     opacity: .25;
-}
+}*/
 
 .site-header-tag--features,
 .site-header-tag--fonctionnalites {
