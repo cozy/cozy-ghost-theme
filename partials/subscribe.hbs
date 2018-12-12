@@ -1,10 +1,10 @@
 <div class="subscribe{{#if card}} subscribe--card{{/if}}">
     <div class="subscribe-wrapper">
-        <p class="subscribe-text">{{t "Subscribe to our new blog posts and to Cozy news."}}</p>
+        <p class="subscribe-text">{{#if card}}{{t "Get our fresh and exclusive news because we love coding but also writing"}}{{else}}{{t "We love coding but also writing and sharing our experiences."}}{{/if}}</p>
         <form class="subscribe-form" action="https://cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&amp;id=a9da8da0de" method="POST">
             <div class="subscribe-input">
                 <label>
-                    <input type="email" name="EMAIL" required placeholder="{{t "Your email"}}">
+                    <input type="email" name="EMAIL" required placeholder="{{#if card}}{{t "Your email"}}{{else}}{{t "Your email (which will be safe)"}}{{/if}}">
                 </label>
             </div>
             <div class="subscribe-asimov" aria-hidden="true">
@@ -14,7 +14,7 @@
                 <input type="hidden" value="{{t "newsletterLang"}}" name="group[125]">
             </div>
             <div class="subscribe-submit">
-                <button type="submit">{{t "Subscribe"}}</button>
+                <button type="submit">{{t "Keep me posted"}}</button>
             </div>
         </form>
     </div>

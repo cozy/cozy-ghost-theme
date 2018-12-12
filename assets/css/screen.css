@@ -2054,7 +2054,7 @@ Usage (In Ghost editor):
 }
 
 .subscribe--card {
-    background: url('/assets/img/craie.png') center center / cover no-repeat;
+    background: url('/assets/img/subscribe.png') center center / cover no-repeat;
     margin-top: 0;
 }
 
@@ -2152,6 +2152,7 @@ Usage (In Ghost editor):
 .subscribe-submit {
     flex: 0 1 30%;
     margin-left: 3%;
+    white-space: nowrap;
 }
 
 .subscribe--card .subscribe-submit {
