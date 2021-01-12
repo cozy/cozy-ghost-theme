@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - '8'
+cache:
+  yarn: true
+  directories:
+  - node_modules
+script:
+- yarn zip
+deploy:
+  provider: releases
+  api_key: "GITHUB_TOKEN"
+  file: "dist/cozy.zip"
+  skip_cleanup: true
+  on:
+    tags: true
