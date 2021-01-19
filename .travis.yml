@@ -8,10 +8,8 @@ cache:
 script:
 - yarn zip
 deploy:
-  provider: releases
-  api_key:
-    secure: hvr8nDy7jNGs6mSbgKgiynuOWZSx0fuVLJx6KSfq8B0S6zsd/Cb5Q3c7VaHhF7dP2CY361wJzMt9nUt9QBiTRTxcufX7Uk74ha/nf9SkK+XrXUz0r9E3uY+36s2zgASdqqD+/r1x/Hf4ojWhb49+5HB6eXlvdOhZTw29T49fLMEaUAZyAqGIEw7tOUkZW1bxHC1mkn/qDpEJLAmpGIQfuVCF4y8/Hp+1Kja3dFahjzmbGfSl/jGSkAQWWJaajx2dydvg8WoVzaUjfGjdfbioYU7H0i5FGVGUbCw27HFGMsoKL+AhEN+UOtE2WINim48w4o6srUBtd9E4xe/IXApLMB6TqU5MnWdHT+I5Pa1tvDK3xBC9cX9rEiId9SJqw0eZgiFlSpCa0nIZxRH1lTyoRwMpCGWCC0AJ8Q88v1A0G3MvmBax6mmss5HYjSPoD/exPIECKPqqL2gP2Hpj7IjEaBJ2Tv7yHm+kbtIdrMBIpMn4ZKTa2T6t0RSEGuHuR09cKI1dVJlOtiXTwVF+jrN0euS40Hwkt2PCwM1ZBrAC1X+QHATr8bF3+xFlRUTMdbwSFN29iBxkoVASpMTQCdyju4k2LezzzEe5nDI+kUwyEtLk3lkds7UvB38+faGizQ40M33/tvXU66XUlOH9+iD6MGv1IbfdJhMTgRBL/gyJcUk=
-  file: dist/cozy.zip
-  skip_cleanup: true
+  provider: scripts
+  cleanup: false
+  script: bash deploy.sh
   on:
     tags: true
