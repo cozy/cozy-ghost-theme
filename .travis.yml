@@ -9,7 +9,7 @@ script:
 - yarn zip
 deploy:
   provider: scripts
-  cleanup: false
+  skip_cleanup: true
   script: bash deploy.sh
   on:
     tags: true
