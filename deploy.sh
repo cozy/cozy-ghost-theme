@@ -17,5 +17,5 @@ curl "https://uploads.github.com/repos/cozy/cozy-ghost-theme/releases/$release_i
     -f \
     -H "Authorization: token $GITHUB_TOKEN" \
     -H "Content-Type: $(file -b --mime-type $file)" \
-    --data-binary @$file \
+    --data-binary @$file
 echo "Done !"
