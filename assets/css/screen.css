@@ -931,7 +931,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-title {
-    margin: 0;
+    margin: 1.2em 0 0 0;
     color: color(var(--darkgrey) l(-5%));
     line-height: 1.25;
 }
