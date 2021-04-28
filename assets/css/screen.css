@@ -1136,13 +1136,14 @@ Usage (In Ghost editor):
 }
 
 .post-full-content h2 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 3.6rem;
+    margin: 1.5em 0 .4em;
+    font-size: 3.4rem;
     font-weight: 400;
 }
 @media (max-width: 500px) {
     .post-full-content h2 {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
+        font-weight: 600;
     }
 }
 
