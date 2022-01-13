@@ -1,6 +1,6 @@
 # Cozy
 
-The Cozy theme for [Ghost](http://github.com/tryghost/ghost/). This theme is based on Casper, the default theme for Ghost. 
+The Cozy theme for [Ghost](http://github.com/tryghost/ghost/). This theme is based on Casper, the default theme for Ghost.
 
 &nbsp;
 
@@ -10,14 +10,27 @@ The Cozy theme for [Ghost](http://github.com/tryghost/ghost/). This theme is bas
 
 # Development
 
-Cozy styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need Node and Gulp installed globally. After that, from the theme's root directory:
+## Requirements
+
+Building this theme requires node 8. You also need [gulp](https://gulpjs.com/docs/en/getting-started/quick-start/) cli installed globally.
+
+Required modules should be installed with
 
 ```bash
 $ yarn install
+```
+
+## Watch
+
+Cozy styles are compiled using Gulp/PostCSS to polyfill future CSS spec. From the theme's root directory:
+
+```bash
 $ yarn dev
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+
+## Release
 
 The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
 
