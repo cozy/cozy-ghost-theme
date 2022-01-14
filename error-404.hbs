@@ -15,13 +15,12 @@ It's a good idea to keep this template as minimal as possible in terms of both f
 </head>
 <body class="error-template">
     <div class="site-wrapper">
-
+        {{> "about"}}
         <header class="site-header outer">
             <div class="inner">
                 {{> "site-nav"}}
             </div>
         </header>
-
         <main id="site-main" class="site-main outer">
             <div class="inner">
 
@@ -44,7 +43,22 @@ It's a good idea to keep this template as minimal as possible in terms of both f
             </div>
         </aside>
         {{/get}}
-
     </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+    <script>
+    $(function() {
+        $(".site-about-toggle").click(function() {
+            $(this).find('.arrow').toggleClass('arrow--top');
+            $(".site-about-content").slideToggle();
+        });
+    });
+    </script>
 </body>
 </html>
