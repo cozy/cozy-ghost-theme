@@ -9,15 +9,15 @@ into the {body} of the default.hbs template --}}
         {{> "site-nav"}}
     </div>
     <!--
-    <div class="site-header-content {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+    <div class="site-header-content {{#if @site.cover_image}}" style="background-image: url({{@site.cover_image}}){{else}}no-cover{{/if}}">
         <div class="inner">
             <h1 class="site-title">
-                {{#if @blog.logo}}
-                    <img class="site-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+                {{#if @site.logo}}
+                    <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
                 {{/if}}
-                {{@blog.title}}
+                {{@site.title}}
             </h1>
-            <h2 class="site-description">{{@blog.description}}</h2>
+            <h2 class="site-description">{{@site.description}}</h2>
         </div>
     </div>
     -->

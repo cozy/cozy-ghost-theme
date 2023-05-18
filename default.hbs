@@ -20,7 +20,7 @@
 
     <style>
     :root {
-      --blogUrl: url('{{@blog.url}}')
+      --blogUrl: url('{{@site.url}}')
     }
     </style>
 </head>
@@ -36,10 +36,10 @@
         {{> "subscribe"}}
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://cozy.io/{{@site.locale}}/about">{{t "About sth"}} {{@blog.title}}</a></section>
+                <section class="copyright"><a href="https://cozy.io/{{@site.locale}}/about">{{t "About sth"}} {{@site.title}}</a></section>
                 <nav class="site-footer-nav">
-                    {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener" class="facebook">{{> icons/facebook}}</a>{{/if}}
-                    {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener" class="twitter">{{> icons/twitter}}</a>{{/if}}
+                    {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener" class="facebook">{{> icons/facebook}}</a>{{/if}}
+                    {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener" class="twitter">{{> icons/twitter}}</a>{{/if}}
                     <a href="https://www.linkedin.com/company/cozy-cloud/" target="_blank" rel="noopener">{{> icons/linkedin}}</a>
                     <a href="https://github.com/cozy" target="_blank" rel="noopener">{{> icons/github}}</a>
                     <a href="https://ghost.org" target="_blank" rel="noopener">{{t "Cozy chose Ghost 💙"}}</a>

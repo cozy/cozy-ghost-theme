@@ -22,7 +22,6 @@ production stylesheet in assets/built/screen.css
 10. Subscribe
 11. Site Footer
 12. Site About
-13. Image gallery
 
 */
 
@@ -2455,56 +2454,4 @@ Usage (In Ghost editor):
 .about-signature {
     text-align: right;
     color: var(--midgrey);
-}
-
-/* 13. Image gallery
-/* ---------------------------------------------------------- */
-
-.kg-gallery-card,
-.kg-gallery-card * {
-    box-sizing: border-box;
-}
-
-.kg-gallery-card,
-.kg-image-card {
-    gap: 1.2rem;
-}
-
-.kg-image-card:not(.kg-card-hascaption) + .kg-image-card,
-.kg-image-card:not(.kg-card-hascaption) + .kg-gallery-card,
-.kg-gallery-card:not(.kg-card-hascaption) + .kg-image-card,
-.kg-gallery-card:not(.kg-card-hascaption) + .kg-gallery-card {
-    margin-top: 1.2rem;
-}
-
-.kg-gallery-container {
-    position: relative;
-}
-
-.kg-gallery-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.kg-gallery-image img {
-    display: block;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.kg-gallery-row:not(:first-of-type) {
-    margin: 1.2rem 0 0;
-}
-
-.kg-gallery-image:not(:first-of-type) {
-    margin: 0 0 0 1.2rem;
-}
-
-@media (max-width: 600px) {
-    .kg-gallery-card,
-    .kg-image-card {
-        gap: 0.6rem;
-    }
 }
