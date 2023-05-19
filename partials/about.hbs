@@ -2,7 +2,7 @@
 <div class="site-about">
     <div class="site-about-toggle">
         <div class="inner">
-            {{t "About sth"}} {{@blog.title}}
+            {{t "About sth"}} {{@site.title}}
             {{> "icons/arrow"}}
         </div>
     </div>
@@ -16,10 +16,10 @@
                 </div>
                 {{navigation}}
                 <ul class="about-social">
-                    {{#if @blog.facebook}}<li><a class="social-link social-link-fb" href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">{{> icons/facebook}}</a></li>{{/if}}
-                    {{#if @blog.twitter}}<li><a class="social-link social-link-tw" href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">{{> icons/twitter}}</a></li>{{/if}}
+                    {{#if @site.facebook}}<li><a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">{{> icons/facebook}}</a></li>{{/if}}
+                    {{#if @site.twitter}}<li><a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">{{> icons/twitter}}</a></li>{{/if}}
                     <li><a class="social-link social-link-gh" href="https://github.com/cozy/cozy-stack" target="_blank" rel="noopener">{{> icons/github}}</a></li>
-                    <li><a class="social-link social-link-rss" href="{{@blog.url}}/rss/" target="_blank" rel="noopener">{{> icons/rss}}</a></li>
+                    <li><a class="social-link social-link-rss" href="{{@site.url}}/rss/" target="_blank" rel="noopener">{{> icons/rss}}</a></li>
                 </ul>
             </div>
             <div class="about-item">
@@ -57,21 +57,21 @@
                     <li>
                         <a href="https://itunes.apple.com/{{@site.locale}}/developer/cozy-cloud/id1131616091?mt=8" target="_blank">
                             <figure>
-                                <img src="{{@blog.url}}/assets/img/app-store-badge-{{@site.locale}}.svg" alt="{{t "Download Cozy on iOS"}}">
+                                <img src="{{asset (concat '/img/app-store-badge-' @site.locale '.svg') }}" alt="{{t "Download Cozy on iOS"}}">
                             </figure>
                         </a>
                     </li>
                     <li>
                         <a href="https://play.google.com/store/apps/developer?id=Cozy+Cloud&amp;hl={{@site.locale}}" target="_blank">
                             <figure>
-                                <img src="{{@blog.url}}/assets/img/google-play-badge-{{@site.locale}}.svg" alt="{{t "Download Cozy on Android"}}">
+                                <img src="{{asset (concat '/img/google-play-badge-' @site.locale '.svg') }}" alt="{{t "Download Cozy on Android"}}">
                             </figure>
                         </a>
                     </li>
                     <li>
                         <a href="https://cozy.io/{{@site.locale}}/download/#desktop">
                             <figure>
-                                <img src="{{@blog.url}}/assets/img/computer-badge-{{@site.locale}}.svg" alt="{{t "Cozy Drive for Desktop"}}">
+                                <img src="{{asset (concat '/img/computer-badge-' @site.locale '.svg') }}" alt="{{t "Cozy Drive for Desktop"}}">
                             </figure>
                         </a>
                     </li>

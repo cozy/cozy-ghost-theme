@@ -1,9 +1,9 @@
 {
     "name": "cozy",
     "description": "The Cozy theme for ghost, based on Casper theme",
-    "version": "3.1.0",
+    "version": "4.0.0",
     "engines": {
-        "ghost": ">=1.2.0"
+        "ghost": ">=5.37.0"
     },
     "license": "MIT",
     "screenshots": {
@@ -11,8 +11,8 @@
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "scripts": {
-      "dev": "gulp",
-      "zip": "gulp zip"
+        "dev": "gulp",
+        "zip": "gulp zip"
     },
     "author": {
         "name": "Cozy Team",
@@ -53,5 +53,6 @@
     },
     "config": {
         "posts_per_page": 10
-    }
+    },
+    "card_assets": true
 }
