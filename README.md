@@ -2,6 +2,9 @@
 
 The Cozy theme for [Ghost](http://github.com/tryghost/ghost/). This theme is based on Casper, the default theme for Ghost.
 
+> [!CAUTION]
+> This repository has been archived and this theme is not maintained anymore
+
 &nbsp;
 
 ![screenshot-desktop](https://raw.githubusercontent.com/cozy/cozy-ghost-theme/master/assets/screenshot-desktop.png)
@@ -17,7 +20,7 @@ Building this theme requires node 8. You also need [gulp](https://gulpjs.com/doc
 Required modules should be installed with
 
 ```bash
-$ yarn install
+yarn install
 ```
 
 ## Watch
@@ -25,7 +28,7 @@ $ yarn install
 Cozy styles are compiled using Gulp/PostCSS to polyfill future CSS spec. From the theme's root directory:
 
 ```bash
-$ yarn dev
+yarn dev
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
@@ -35,7 +38,7 @@ Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/
 The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
 
 ```bash
-$ yarn zip
+yarn zip
 ```
 
 # PostCSS Features Used
@@ -44,13 +47,11 @@ $ yarn zip
 - Variables - Simple pure CSS variables
 - [Color Function](https://github.com/postcss/postcss-color-function)
 
-
 # SVG Icons
 
 Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
 
 You can add your own SVG icons in the same manner.
-
 
 # Copyright & License
 
